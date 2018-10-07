@@ -1,3 +1,8 @@
+import java.net.InetAddress;
+//import osc.JavaOSC.modules.core.src.main.java.com.illposed.osc.*;
+//import JavaOSC.modules.core.src.main.java.com.illposed.osc.*;
+//import JavaOSC.modules.core.src.main.java.com.illposed.osc.utility.*;
+
 public class Arms {
 
 
@@ -28,7 +33,17 @@ public class Arms {
             System.out.print(vs + ", ");
         }
         System.out.println("");
+        } else {
+          /*  InetAddress add = InetAddress.getLocalHost(); //update with shimone
+            OSCMessage message = new OSCMessage(add.toString());
+            message.addArgument(v);
+            OSCPortOut out = new OSCPortOut(add);
+            out.send(message);
+
+        */
+
         }
+
     }
 
     public int[] getState() {
@@ -43,7 +58,7 @@ public class Arms {
         if(v.length != 4) {
             return false;
         }
-        if(v[0] < v[1] && v[1] < v[2]  && v[2] < v[3] && v[3] < G ) {
+        if(v[0] < v[1] && v[1] < v[2]  && v[2] < v[3] && v[3] < G) {
              for(int i = 0; i < v.length; i++) {
 
                 if(!isValidChange(i, v[i])) return false;
@@ -63,10 +78,4 @@ public class Arms {
     }
     return r + v[v.length - 1] + "}";
     }
-
-
-
-
-
-
 }

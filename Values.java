@@ -68,13 +68,20 @@ public class Values extends TimerTask {
     C another given integer
     */
     public static void main(String[] args) throws FileNotFoundException {
+    if( args.length < 5) {
+        T = 200;
+    G = 48;
+    D = 10;
+    M = 10;
+    C = 100;
 
+    } else {
     T = Integer.parseInt(args[0]); //greater than 100
     G = Integer.parseInt(args[1]);
     D = Integer.parseInt(args[2]);// difference between iterations max
     M = Integer.parseInt(args[3]);
     C = Integer.parseInt(args[4]);
-
+    }
     positions = new Arms(G,D);
     if( T < 100 ) T = 100;//ensures T is not faster than the robot
 
