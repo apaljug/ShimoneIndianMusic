@@ -1,5 +1,7 @@
 # ShimoneIndianMusic
-Work on the robotic marimbe player Shimone, to develop an algorithm for performing live improvised Indian music.
+Overal Goal:Work on the robotic marimbe player Shimone, to develop an algorithm for performing live improvised Indian music.
+Subprojects: ShimonePathPlanning, BeatDetect & midiAnalysis
+
 
 ### ShimonePathPlanning
 Basic path planning algorithm that would move the hypothetical mallet arms of shimone in order to play the correct notes on time.
